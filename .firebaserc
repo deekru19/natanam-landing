@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "test-fe3f0"
+  },
+  "targets": {
+    "test-fe3f0": {
+      "hosting": {
+        "natanam-landing": [
+          "natanam-landing"
+        ]
+      }
+    }
+  }
+}
