@@ -524,6 +524,12 @@
           }s`;
           observer.observe(card);
         });
+
+        // Reset loading overlay when the page is shown (including back/forward cache)
+        const loadingOverlay = document.getElementById("loadingOverlay");
+        const resetOverlay = () => loadingOverlay.classList.remove("active");
+        window.addEventListener("pageshow", resetOverlay);
+        window.addEventListener("load", resetOverlay);
       });
     </script>
   </body>
