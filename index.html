@@ -104,12 +104,17 @@
         margin-top: 15px;
         display: inline-flex;
         align-items: center;
-        gap: 15px;
+        gap: 12px;
         background: white;
-        padding: 8px 24px;
+        padding: 10px 20px;
         border-radius: 50px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        flex-wrap: nowrap;
+      }
+
+      .meta-info span {
+        white-space: nowrap;
       }
 
       /* Welcome Text */
@@ -329,6 +334,18 @@
       @media (max-width: 768px) {
         .event-card {
           width: 100%;
+        }
+      }
+
+      @media (max-width: 400px) {
+        .meta-info {
+          flex-direction: column;
+          gap: 6px;
+          padding: 12px 20px;
+        }
+        
+        .meta-info span[style] {
+          display: none;
         }
       }
     </style>
