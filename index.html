@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Banaswadi Natyanjali 2026 - Registration</title>
+    <title>Sri Ramotsavam 2026 - Dance Registration</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -457,6 +457,35 @@
         }
       }
 
+      /* Sold Out Button Style */
+      .btn-sold-out {
+        display: block;
+        padding: 16px 24px;
+        background: linear-gradient(135deg, #6b7280, #4b5563);
+        color: white;
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: 700;
+        font-size: 1.05rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        box-shadow: 0 4px 15px rgba(75, 85, 99, 0.3);
+        cursor: default;
+        position: relative;
+      }
+
+      .event-card.sold-out {
+        cursor: default;
+      }
+
+      .event-card.sold-out:hover {
+        transform: translateY(-5px);
+      }
+
+      .event-card.sold-out:hover .btn-sold-out {
+        animation: none;
+      }
+
       /* Loading Overlay */
       .loading-overlay {
         position: fixed;
@@ -565,9 +594,9 @@
     <div class="container">
       <header class="header">
         <div class="subtitle">Experience the Divine</div>
-        <h1>Banaswadi Natyanjali 2026</h1>
+        <h1>Sri Ramotsavam 2026</h1>
         <div class="meta-info">
-          <span>📅 Feb 14 - 15, 2026</span>
+          <span>📅 March 26, 2026</span>
           <span style="color: #ddd">|</span>
           <a href="https://maps.app.goo.gl/h1PT63Rq7sVK1TGW6" target="_blank" rel="noopener" 
              style="color: #b45309; text-decoration: underline; text-underline-offset: 3px; display: inline-flex; align-items: center; gap: 4px; font-weight: 500; transition: color 0.2s ease;"
@@ -581,7 +610,7 @@
 
       <div class="welcome">
         <p>
-          Celebrate the rhythm of life and the soul of music. Choose your path to join the
+          Celebrate the grace and rhythm of classical dance. Register now to be part of the
           celebration.
         </p>
       </div>
@@ -654,39 +683,15 @@
       </div>
 
       <div class="cards-container">
-        <div
-          class="event-card"
-          onclick="navigateTo('music')"
-          role="button"
-          tabindex="0"
-          onkeypress="handleKeyPress(event, 'music')"
-        >
-          <div class="card-image">
-            <img src="Music.webp" alt="Music" />
-          </div>
-          <div class="card-content">
-            <span class="event-date">DAY 1 • FEB 14</span>
-            <h2>Music/ Instrumental</h2>
-            <p class="event-desc">Carnatic, Hindustani & classical instrumental performances.</p>
-            <span class="btn">Start Registration</span>
-          </div>
-        </div>
-
-        <div
-          class="event-card"
-          onclick="navigateTo('dance')"
-          role="button"
-          tabindex="0"
-          onkeypress="handleKeyPress(event, 'dance')"
-        >
+        <div class="event-card" onclick="navigateTo('dance')" tabindex="0" role="button" aria-label="Register for Classical Dance" onkeypress="handleKeyPress(event, 'dance')">
           <div class="card-image">
             <img src="Dance.webp" alt="Dance" />
           </div>
           <div class="card-content">
-            <span class="event-date">DAY 2 • FEB 15</span>
+            <span class="event-date">MARCH 26, 2026</span>
             <h2>Classical Dance</h2>
             <p class="event-desc">The grace of Bharatanatyam, Kathak, and traditional forms.</p>
-            <span class="btn">Start Registration</span>
+            <a class="btn">REGISTER NOW →</a>
           </div>
         </div>
       </div>
@@ -705,7 +710,6 @@
 
         const urls = {
           dance: "https://dance.natanamfoundation.com",
-          music: "https://music.natanamfoundation.com",
         };
 
         setTimeout(() => {
