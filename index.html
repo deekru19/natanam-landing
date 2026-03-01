@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -142,7 +142,8 @@
         margin: 40px 0 60px;
         padding: 28px;
         border-radius: 24px;
-        background: radial-gradient(circle at 15% 20%, rgba(255, 126, 95, 0.14), transparent 45%),
+        background:
+          radial-gradient(circle at 15% 20%, rgba(255, 126, 95, 0.14), transparent 45%),
           radial-gradient(circle at 85% 30%, rgba(254, 180, 123, 0.18), transparent 45%), #fff;
         box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
       }
@@ -181,7 +182,9 @@
         font-weight: 700;
         text-decoration: none;
         box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
       }
 
       .highlight-copy .cta:hover {
@@ -228,7 +231,9 @@
         align-items: center;
         justify-content: center;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
       }
 
       .play-btn::after {
@@ -260,7 +265,9 @@
         width: 48px;
         height: 48px;
         border-radius: 14px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
         cursor: pointer;
       }
 
@@ -424,7 +431,9 @@
         border-radius: 50%;
         background: rgba(255, 255, 255, 0.3);
         transform: translate(-50%, -50%);
-        transition: width 0.6s, height 0.6s;
+        transition:
+          width 0.6s,
+          height 0.6s;
       }
 
       .btn:hover::before {
@@ -596,14 +605,35 @@
         <div class="subtitle">Experience the Divine</div>
         <h1>Sri Ramotsavam 2026</h1>
         <div class="meta-info">
-          <span>📅 March 26, 2026</span>
+          <span>📅 March 27, 2026</span>
           <span style="color: #ddd">|</span>
-          <a href="https://maps.app.goo.gl/h1PT63Rq7sVK1TGW6" target="_blank" rel="noopener" 
-             style="color: #b45309; text-decoration: underline; text-underline-offset: 3px; display: inline-flex; align-items: center; gap: 4px; font-weight: 500; transition: color 0.2s ease;"
-             onmouseover="this.style.color='#ff7e5f'" 
-             onmouseout="this.style.color='#b45309'">
+          <a
+            href="https://maps.app.goo.gl/h1PT63Rq7sVK1TGW6"
+            target="_blank"
+            rel="noopener"
+            style="
+              color: #b45309;
+              text-decoration: underline;
+              text-underline-offset: 3px;
+              display: inline-flex;
+              align-items: center;
+              gap: 4px;
+              font-weight: 500;
+              transition: color 0.2s ease;
+            "
+            onmouseover="this.style.color = '#ff7e5f'"
+            onmouseout="this.style.color = '#b45309'"
+          >
             📍 Sri Anjaneya Temple, Banaswadi
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="opacity: 0.7;"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              style="opacity: 0.7"
+            >
+              <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
+            </svg>
           </a>
         </div>
       </header>
@@ -683,12 +713,19 @@
       </div>
 
       <div class="cards-container">
-        <div class="event-card" onclick="navigateTo('dance')" tabindex="0" role="button" aria-label="Register for Classical Dance" onkeypress="handleKeyPress(event, 'dance')">
+        <div
+          class="event-card"
+          onclick="navigateTo('dance')"
+          tabindex="0"
+          role="button"
+          aria-label="Register for Classical Dance"
+          onkeypress="handleKeyPress(event, 'dance')"
+        >
           <div class="card-image">
             <img src="Dance.webp" alt="Dance" />
           </div>
           <div class="card-content">
-            <span class="event-date">MARCH 26, 2026</span>
+            <span class="event-date">MARCH 27, 2026</span>
             <h2>Classical Dance</h2>
             <p class="event-desc">The grace of Bharatanatyam, Kathak, and traditional forms.</p>
             <a class="btn">REGISTER NOW →</a>
