@@ -113,6 +113,48 @@
         flex-wrap: nowrap;
       }
 
+      .date-highlight {
+        background: linear-gradient(135deg, #ff6b35, #e8530e);
+        color: #fff !important;
+        font-weight: 800;
+        padding: 6px 16px;
+        border-radius: 30px;
+        letter-spacing: 0.5px;
+        font-size: 0.95rem;
+        animation: datePulseHeader 2.5s ease-in-out infinite;
+        white-space: nowrap;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .date-highlight::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -75%;
+        width: 50%;
+        height: 200%;
+        background: linear-gradient(
+          105deg,
+          transparent 40%,
+          rgba(255, 255, 255, 0.4) 45%,
+          rgba(255, 255, 255, 0.6) 50%,
+          rgba(255, 255, 255, 0.4) 55%,
+          transparent 60%
+        );
+        animation: shimmer 3s ease-in-out infinite;
+      }
+
+      @keyframes shimmer {
+        0% { left: -75%; }
+        100% { left: 125%; }
+      }
+
+      @keyframes datePulseHeader {
+        0%, 100% { box-shadow: 0 2px 10px rgba(255, 107, 53, 0.3); }
+        50% { box-shadow: 0 4px 20px rgba(255, 107, 53, 0.5); }
+      }
+
       .meta-info span {
         white-space: nowrap;
       }
@@ -389,11 +431,47 @@
       }
 
       .event-date {
-        color: var(--primary);
-        font-weight: 700;
-        font-size: 1.2rem;
+        color: #fff;
+        font-weight: 800;
+        font-size: 1.05rem;
         margin-bottom: 15px;
-        display: block;
+        display: inline-block;
+        background: linear-gradient(135deg, #ff6b35, #e8530e);
+        padding: 8px 18px;
+        border-radius: 30px;
+        letter-spacing: 1.5px;
+        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.35);
+        animation: datePulse 2.5s ease-in-out infinite;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .event-date::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -75%;
+        width: 50%;
+        height: 200%;
+        background: linear-gradient(
+          105deg,
+          transparent 40%,
+          rgba(255, 255, 255, 0.4) 45%,
+          rgba(255, 255, 255, 0.6) 50%,
+          rgba(255, 255, 255, 0.4) 55%,
+          transparent 60%
+        );
+        animation: shimmerCard 3s 0.5s ease-in-out infinite;
+      }
+
+      @keyframes shimmerCard {
+        0% { left: -75%; }
+        100% { left: 125%; }
+      }
+
+      @keyframes datePulse {
+        0%, 100% { box-shadow: 0 4px 15px rgba(255, 107, 53, 0.35); }
+        50% { box-shadow: 0 6px 25px rgba(255, 107, 53, 0.55); }
       }
 
       .event-desc {
@@ -605,7 +683,7 @@
         <div class="subtitle">Experience the Divine</div>
         <h1>Sri Ramotsavam 2026</h1>
         <div class="meta-info">
-          <span>📅 March 27, 2026</span>
+          <span class="date-highlight">📅 Friday, March 27, 2026</span>
           <span style="color: #ddd">|</span>
           <a
             href="https://maps.app.goo.gl/h1PT63Rq7sVK1TGW6"
@@ -725,7 +803,7 @@
             <img src="Dance.webp" alt="Dance" />
           </div>
           <div class="card-content">
-            <span class="event-date">MARCH 27, 2026</span>
+            <span class="event-date">🗓 FRIDAY, MARCH 27, 2026</span>
             <h2>Classical Dance</h2>
             <p class="event-desc">The grace of Bharatanatyam, Kathak, and traditional forms.</p>
             <a class="btn">REGISTER NOW →</a>
